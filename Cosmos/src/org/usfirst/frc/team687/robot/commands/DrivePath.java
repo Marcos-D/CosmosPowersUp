@@ -74,7 +74,7 @@ public class DrivePath extends Command {
     	m_theta = Math.atan2(m_deltaX, m_deltaY); 
     	m_perpPath = Math.cos(m_theta) * Robot.drive.getAvgVelocity();
     	
-    	m_lookAhead = Robot.drive.getAvgVelocity() + Constants.kDeciSecond;
+    	m_lookAhead = m_perpPath + Constants.kDeciSecond;
     
     	//Kindergarten
     	a = Math.pow(m_endPointX - m_XPos, 2);
