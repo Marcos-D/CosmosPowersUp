@@ -66,9 +66,9 @@ public class DrivePath extends Command {
     	m_deltaX = m_XPos - m_prevXPos; 
     	m_deltaY = m_XPos - m_prevYPos;
  	
+	m_actualPos = m_startDistance;
     	m_XPos = m_prevXPos;
     	m_YPos = m_prevYPos;	
-    	m_actualPos = m_startDistance;
     	
     	//Trig 
     	m_theta = Math.atan2(m_deltaX, m_deltaY); 
