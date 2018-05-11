@@ -82,11 +82,11 @@ public class DrivePath extends Command {
     	c = Math.pow(a + b, 0.5);
     	
 		//drive
-    	double robotAngle = NerdyMath.boundAngle(m_heading);
-		double rotError = -m_heading - robotAngle;
-		rotError = NerdyMath.boundAngleError(rotError);
-		double rotPower = Constants.kDriveForwardP * rotError;
-		Robot.drive.setPower(m_straightPow - rotPower, m_straightPow + rotPower);
+    	double robotAngle = NerdyMath.boundAngle(m_lookAhead);
+	double rotError = -m_lookAhead - robotAngle;
+	rotError = NerdyMath.boundAngleError(rotError);
+	double rotPower = Constants.kDriveForwardP * rotError;		
+	Robot.drive.setPower(m_straightPow - rotPower, m_straightPow + rotPower);
     
     }
     
